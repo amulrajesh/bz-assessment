@@ -1,0 +1,28 @@
+version: "3.9"
+services:
+  recipe-manager:
+    networks:
+      - recipe_network
+    container_name: recipe-manager
+    image: amulrajesh/recipe-manager:0.0.3
+    environment:
+      SPRING_DATASOURCE_URL: jdbc:postgresql://db:5432/recipe_db
+    ports:
+      - 8080:8080
+    depends_on:
+      - db
+  db:
+    networks: 
+      - recipe_network
+    container_name: postgres
+    image: postgres:alpine
+    ports:
+      - "5432:5432"
+    environment:
+      POSTGRES_PASSWORD: password
+      POSTGRES_USER: postgres
+      POSTGRES_DB: recipe_db
+
+networks:
+  recipe_network:
+    driver: bridge

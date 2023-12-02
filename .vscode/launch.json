@@ -1,0 +1,14 @@
+{
+    "configurations": [
+        {
+            "type": "java",
+            "name": "Spring Boot-BzAssessmentApplication<bz-assessment>",
+            "request": "launch",
+            "cwd": "${workspaceFolder}",
+            "mainClass": "com.ar.bzassesment.BzAssessmentApplication",
+            "projectName": "bz-assessment",
+            "args": "",
+            "envFile": "${workspaceFolder}/.env"
+        }
+    ]
+}

@@ -1,0 +1,22 @@
+spring.main.allow-bean-definition-overriding: true
+
+#data source set-up
+spring:
+  datasource:
+    url: jdbc:postgresql://db:5432/recipe_db
+    username: postgres
+    password: password
+  sql:
+    init:
+      mode: always #remove it in prod
+  jpa:
+    show-sql: true
+
+server:
+  port: 8080
+
+logging:
+  level:
+    org:
+      springframework:
+        security: TRACE
