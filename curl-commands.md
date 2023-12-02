@@ -35,7 +35,7 @@ curl --location --request POST 'http://localhost:8080/api/v1/recipe' \
 --data-raw '{    
     "recipeName": "Dosa",
     "noOfServings": 1,
-    "instructions": "Add Ghee",
+    "instructions": ["Add Ghee"],
     "userId": "postman",
     "type": "veg",
     "ingredients": ["Rice Batter", "Ghee", "Oil"]
@@ -50,7 +50,7 @@ curl --location --request PUT 'http://localhost:8080/api/v1/recipe/1' \
 --data-raw '{    
     "recipeName": "Pasta Updated Version",
     "noOfServings": 1,
-    "instructions": "Add Ghee",
+    "instructions": ["Add Ghee"],
     "userId": "postman",
     "type": "veg",
     "ingredients": ["Rice Batter", "Ghee", "Oil"]
